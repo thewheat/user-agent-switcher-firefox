@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>User Agent Switcher</title>
+		<link rel="stylesheet" href="popup.css"/>
+	</head>
+<body>
+	<div>
+		<div class="ua_details all hide">
+			<strong>UA (all sites):</strong> <span id="current_ua"></span>
+			<button class="save" id="btnResetAll">Reset</button>
+		</div>
+		<div class="ua_details domain hide">
+			<strong>UA (this domain):</strong> <span id="current_ua_this_domain"></span>
+			<button class="save" id="btnResetThisDomain">Reset</button>
+		</div>
+	</div>
+	<strong>Specify Custom UA</strong>
+	<form id="form">
+		<input type="hidden" name="current_domain" value="" class="current_domain">
+		<div class="form-field">
+			<div>
+				<label><input type="radio" name="ua" value="Firefox">Firefox</label>
+				<label><input type="radio" name="ua" value="Chrome">Chrome</label>
+			</div>
+			<div>
+				<label><input type="radio" name="ua" value="iPhone">iPhone</label>
+				<label><input type="radio" name="ua" value="iPad">iPad</label>
+			</div>
+			<div>
+				<label><input type="radio" name="ua" value="IE 11">IE 11</label>
+				<label><input type="radio" name="ua" value="IE 10">IE 10</label>
+			</div>
+			<div>
+				<label><input type="radio" name="ua" value="IE 9">IE 9</label>
+				<label><input type="radio" name="ua" value="IE 8">IE 8</label>
+			</div>
+			<div>
+				<label><input type="radio" name="ua" value="IE 7">IE 7</label>
+				<label><input type="radio" name="ua" value="IE 6">IE 6</label>
+			</div>
+		</div>
+		<div class="form-field">
+			<button class="save" id="btnSaveAll">All Sites</button>
+			<button class="save" id="btnSaveThisDomain">This Domain</button>
+		</div>
+		<div class="form-field">
+		</div>
+	</form>
+	<small>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small>
+	<script src="popup.js"></script>
+</body>
+</html>
